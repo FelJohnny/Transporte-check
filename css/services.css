@@ -68,8 +68,8 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 90px;
-    margin: 0 10px;
+    gap: 50px;
+    margin:10px;
     
 }
 
@@ -78,7 +78,7 @@ body{
     background: var(--cor-caixa);
     grid-template-rows: 1fr 3fr;
     max-width: 350px; 
-    height: 260px;   
+    height: 150px;
     border: 1px solid var(--cor-borda);
     border-radius: 5px;
 }
