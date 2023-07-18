@@ -104,8 +104,8 @@
 .caixa .button{
     justify-self: center;
     text-align: center;
-    height: 2rem;
     width: 10rem;
+    padding: 15px 0;
     color: black;
     cursor: pointer;
     font-weight: bold;
@@ -120,13 +120,12 @@
         var(--_g) calc(200% - var(--_p,0%)) 100%;
     background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
     outline-offset: .1em;
-    transition: background-size .4s, background-position 0s .4s;
+    transition: background-size .3s, background-position 0s .3s;
 }
-
 
 .caixa .button:hover {
     --_p: 100%;
-    transition: background-position .4s, background-size 0s;
+    transition: background-position .3s, background-size 0s;
     color: white;
 }
 
