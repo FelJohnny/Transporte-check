@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+    list-style: none;
+}
+
+:root{
+  --cor-principal: rgb(1, 66, 106);
+  --cor-botao: rgb(2, 111, 179);
+  --cor-caixa: rgba(235, 232, 232, 0.486);
+  --cor-borda: rgb(184, 186, 190);
+
+}
