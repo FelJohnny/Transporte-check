@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+
+
+body{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: rgb(138, 139, 139);
+    
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+
+}
+
+a{
+    padding-top: 10px;
+}
+
+input{
+    font-size: 1.5rem;
+    border: 2px solid rgb(117, 117, 117);
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+    
+}
+
+
+.enviar{
+    padding: 5px 15px;
+    border: none;
+    justify-self: flex-end;
+    background: rgb(4, 102, 158);
+    color: white;
+}
+
+
+.enviar:hover{
+    background: rgb(77, 135, 168);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.enviar:active{
+    background: rgb(75, 93, 104);
+    transition: 0.1s;
+}
+
+.login{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border: 1px;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding-bottom: 150px;
+    padding: 0 20px;
+    
+    
+}
+
+
+
+.logo{
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    background-image: url(../img/Backgroud-Login.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    
+    
+}
+
+.logo img{
+    height: 300px;
+    
+      
+    
+}
+
+@media (max-width:722px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    .login{
+        padding-bottom: 50px;
+    }
+
+}
+
+@media (max-width:392px){
+    .login{
+        padding-bottom: 500px;
+        padding-top: 100px;
+    }
+
+}
