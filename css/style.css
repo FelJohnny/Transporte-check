@@ -6,7 +6,10 @@
 
 }
 
-
+:root{
+    --cor-principal: rgb(1, 66, 106);
+  
+  }
 
 body{
     display: grid;
@@ -42,24 +45,38 @@ input{
 
 
 .enviar{
-    padding: 5px 15px;
-    border: none;
-    justify-self: flex-end;
-    background: rgb(4, 102, 158);
-    color: white;
+    height: 2.5rem;
+    width: 8rem;
+    justify-self: end;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px ;
+    border-radius: 5px;
+    border: 1px;
+    box-shadow: 0 0 0 .1em inset var(--cor-principal); 
+    --_g: linear-gradient(var(--cor-principal) 0 0) no-repeat;
+    background: 
+        var(--_g) calc(var(--_p,0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p,0%)) 0%,
+        var(--_g) calc(var(--_p,0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
 }
 
 
 .enviar:hover{
-    background: rgb(77, 135, 168);
-    transition: 0.3s;
-    cursor: pointer;
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+    color: white;
 }
 
 
 .enviar:active{
-    background: rgb(75, 93, 104);
-    transition: 0.1s;
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--cor-principal);
+    color: #fff;
 }
 
 .login{
