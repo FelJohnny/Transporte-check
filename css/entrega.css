@@ -53,7 +53,24 @@
     }
 }
 
+.contain-circulo{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
+    position: relative;
+    width: 40rem;
 
+}
+
+.circulo-btn{
+    position: absolute;
+    bottom: 90px;
+    right: 130px;
+    height: 1rem;
+    width: 1rem;
+    background: red;
+}
+
+.circulo-btn:active{
+    background: blue;
+}
 
 #observ{
     font-size: 1rem ;
