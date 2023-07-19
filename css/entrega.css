@@ -61,15 +61,39 @@
 
 .circulo-btn{
     position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.fiorino-btn-1{
     bottom: 90px;
     right: 130px;
-    height: 1rem;
-    width: 1rem;
-    background: red;
+    
+}
+
+.fiorino-btn-2{
+    bottom: 150px;
+    left: 200px;
+}
+
+.fiorino-btn-3{
+    bottom: 130px;
+    right: 255px;
+}
+
+.fiorino-btn-4{
+    bottom: 30px;
+    left: 170px;
 }
 
 .circulo-btn:active{
-    background: blue;
+    background-color: blue;
+    border: 1px solid;
+    
 }
 
 #observ{
