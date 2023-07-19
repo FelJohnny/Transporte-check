@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,8 @@
     <header class="header">
         <nav class="menu">
             <ul>
-                <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png"alt='logo'></a></li>
+                <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png"
+                            alt='logo'></a></li>
                 <li><a class="sair" href="./index.html">SAIR</a></li>
             </ul>
         </nav>
@@ -24,24 +26,81 @@
     <section class="entrega">
         <h2>Selecione o veiculo</h2>
         <form action="" class="form-entrega">
-            
-            <select id="veiculos" name="veiculos" >
+
+            <select id="veiculos" name="veiculos" class="list-btn" required>
+                <option selected disabled hidden></option>
                 <option value="1">hyuday - HR</option>
                 <option value="2">Fiorino - Fiat</option>
             </select>
-    
+
+            <h3>O veiculo possui alguma danificação?</h3>
+            <select name="danificacao" id="danificacao" class="list-btn" required>
+                <option selected disabled hidden></option>
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+            </select>
+
             <div class="box-img">
-                <img  class="fiorino" src="./img/Fiorino-img.png" alt="Fiorino">
+                <h3>selecione a localização do problema na imagem abaixo</h3>
+                <img class="fiorino" src="./img/Fiorino-img.png" alt="Fiorino">
             </div>
-            
+            <h3>Selecione o(s) problema(s):</h3>
+            <select name="problema" id="problema" required >
+                <option selected disabled hidden></option>
+                <option value="1">Farol Esq.</option>
+                <option value="2">Farol Dir.</option>
+                <option value="3">Pisca Esq.</option>
+                <option value="4">Pisca Dir</option>
+                <option value="5">Lanterna Esq.</option>
+                <option value="6">Lanterna Dir.</option>
+                <option value="7">Luz Freio</option>
+                <option value="8">Luz Placa</option>
+                <option value="9">Buzina</option>
+                <option value="10">Ar Condicionado</option>
+                <option value="11">Retrovisor Interno</option>
+                <option value="12">Retrovisor Esq.</option>
+                <option value="13">Retrovisor Dir.</option>
+                <option value="14">Nivel de Óleo Hidraulico</option>
+                <option value="15">Nivel Água Parabrisa</option>
+                <option value="16">Nivel Fluído de Freio</option>
+                <option value="17">Nivel Liq. Arrefecimento</option>
+                <option value="18">Limpador Parabrisa</option> 
+                <option value="19">Vidros Laterais</option>
+                <option value="20">Parabrisa Traseiro</option>
+                <option value="21">Parabrisa Dianteiro</option>
+                <option value="22">Vidros Eletricos</option>
+                <option value="23">Rádio</option>
+                <option value="24">Estofamento Bancos</option>
+                <option value="25">Tapetes internos</option>
+                <option value="26">Forros Internos</option>
+                <option value="27">Macaco</option> 
+                <option value="28">Chave de Roda</option>
+                <option value="29">Estepe</option>
+                <option value="30">Triangulo</option>
+                <option value="31">Extintor</option>
+                <option value="32">Bateria</option>
+                <option value="33">Indicadores Painel</option>
+                <option value="34">Documento Veicular</option>
+                <option value="35">Manual do Carro</option>
+                <option value="36">Cartão Seguro</option>
+                <option value="37">Cartão Abastecimento</option>
+                <option value="38">GPS</option>
+                <option value="39">Cinto de segurança</option>
+                <option value="40">Limpeza interior</option>
+                <option value="41">Limpeza Exterior</option>
+                <option value="42">Chave Ignição</option>
+            </select>
             <h3>Observações:</h3>
-            <textarea name="observ" id="observ" cols="30" rows="5"></textarea>
+            <textarea name="observ" id="observ" cols="30" rows="2"></textarea>
 
             <button class="button-entrega">SEGUIR</button>
 
         </form>
     </section>
-    <footer><p>Todos direitos Reservados</p></footer>
-    
+    <footer>
+        <p>Todos direitos Reservados</p>
+    </footer>
+
 </body>
+
 </html>
