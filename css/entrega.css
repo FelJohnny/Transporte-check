@@ -23,6 +23,13 @@
     border-radius: 5px;
     height: 25px;
     margin-bottom: 5px;
+    background-color: rgb(248, 248, 248);
+    cursor: pointer;
+}
+
+#veiculos:hover{
+    background-color: rgb(235, 234, 234);
+    transition: 0.3;
 }
 
 .box-img{
@@ -52,13 +59,15 @@
     font-size: 1rem ;
     padding: 5px;
     margin-bottom: 10px;
-    background-color: rgb(235, 234, 234);
+    background-color: rgb(248, 248, 248);
     border-radius: 5px;
     resize: none;
+    transition: 0.3s;
 }
 
 #observ:hover{
-    border:  solid 2px var(--cor-principal);
+    background-color: rgb(235, 234, 234);
+    transition: 0.3s;
     
 }
 .button-entrega{
