@@ -37,6 +37,12 @@
     transition: 0.3;
 }
 
+.desabilita{
+    display: none; /* ativa com js*/
+
+}
+
+
 .boximg{
     width: 40rem;
     padding: 10px;
