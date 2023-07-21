@@ -24,7 +24,8 @@
     </header><!--header-->
 
     <section class="entrega">
-        <h2>Selecione o veiculo</h2>
+            <h2>Checklist Veiculo</h2>
+        <h3>Selecione o veiculo<span class="required">*</span></h3>
         <form action="" class="form-entrega">
 
             <select id="veiculos" name="veiculos" class="list-btn" required>
@@ -33,7 +34,7 @@
                 <option value="2">Fiorino - Fiat</option>
             </select>
 
-            <h3>O veiculo possui alguma danificação?</h3>
+            <h3>O veiculo possui alguma danificação?<span class="required">*</span></h3>
             <select name="danificacao" id="danificacao" class="list-btn" required>
                 <option selected disabled hidden></option>
                 <option value="1">Sim</option>
@@ -42,7 +43,7 @@
 
             <div class="box-img">
                 
-                <h3>selecione a localização do problema na imagem abaixo</h3>
+                <h3>selecione a localização do problema na imagem abaixo<span class="required">*</span></h3>
                 <div class="contain-circulo">
                     <img class="fiorino" src="./img/Fiorino-img.png" alt="Fiorino">
                     <div class="circulo-btn fiorino-btn-1">1</div>
@@ -53,7 +54,7 @@
             
                 </img>
             </div>
-            <h3>Selecione o(s) problema(s):</h3>
+            <h3>Selecione o(s) problema(s):<span class="required">*</span></h3>
             <select name="problema" id="problema" required class="list-btn">
                 <option selected disabled hidden></option>
                 <option value="1">Farol Esq.</option>
@@ -99,8 +100,12 @@
                 <option value="41">Limpeza Exterior</option>
                 <option value="42">Chave Ignição</option>
             </select>
-            <img class="add"  src="./img/plus.png" alt="Adicionar problema">
-            <h3>Observações:</h3>
+            <div class="add">
+                <img src="./img/plus.png" alt="Adicionar problema">
+            </div>
+            <h3>itinerário:<span class="required">*</span></h3>
+            <textarea name="itinerario" id="observ" cols="30" rows="2" required></textarea>
+            <h3>Observação:</h3>
             <textarea name="observ" id="observ" cols="30" rows="2"></textarea>
 
             <button class="button-entrega">SEGUIR</button>
