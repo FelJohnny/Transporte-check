@@ -4,7 +4,10 @@
     text-decoration: none;
     font-family: 'Fira Sans', sans-serif;
     list-style: none;
+    user-select: none;
 }
+
+
 
 :root{
   --cor-principal: rgb(1, 66, 106);

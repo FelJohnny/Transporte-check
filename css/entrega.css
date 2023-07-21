@@ -48,9 +48,6 @@
     
 }
 
-.boximg .fiorino{
-    background-size: cover;
-}
 
 @media (max-width:660px){
     .boximg{
@@ -58,11 +55,19 @@
     }
 }
 
-.contain-circulo-fiorino{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
+.contain-circulo-veiculo1{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
     position: relative;
     display: none;
     width: 40rem;
 
+}
+
+
+
+.contain-circulo-veiculo2{
+    position: relative;
+    display: none;
+    width: 40rem;
 }
 
 .circulo-btn{
@@ -77,32 +82,56 @@
     user-select: none; /*desabilita seleção de texto dentro do btn*/
 }
 
+/*----------------veiculo1 (FIORINO) BOTOES---------------------------*/
 
-.contain-circulo-hyundai-hr{
-    position: relative;
-    display: none;
-    width: 40rem;
-}
-
-.fiorino-btn-1{
+.veiculo1-btn-1{
     bottom: 90px;
     right: 130px;
     
 }
 
-.fiorino-btn-2{
+.veiculo1-btn-2{
     bottom: 150px;
     left: 200px;
 }
 
-.fiorino-btn-3{
+.veiculo1-btn-3{
     bottom: 130px;
     right: 255px;
 }
 
-.fiorino-btn-4{
+.veiculo1-btn-4{
     bottom: 30px;
     left: 170px;
+}
+
+.circulo-btn:active{
+    background-color: var(--cor-principal);
+    border: 1px solid;
+    
+}
+
+/*----------------veiculo1 (FIORINO) BOTOES---------------------------*/
+
+.veiculo2-btn-1{
+    bottom: 120px;
+    right: 40px;
+    
+}
+
+.veiculo2-btn-2{
+    bottom: 240px;
+    left: 200px;
+}
+
+.veiculo2-btn-3{
+    bottom: 200px;
+    right: 160px;
+}
+
+.veiculo2-btn-4{
+    bottom: 60px;
+    left: 120px;
 }
 
 .circulo-btn:active{
