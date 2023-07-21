@@ -17,6 +17,7 @@
 .form-entrega{
     display: grid;
     max-width: 1200px;    
+    width: 1fr;
 }
 
 .form-entrega h3{
@@ -36,7 +37,7 @@
     transition: 0.3;
 }
 
-.box-img{
+.boximg{
     width: 40rem;
     padding: 10px;
     margin-bottom: 10px;
@@ -47,18 +48,19 @@
     
 }
 
-.box-img .fiorino{
+.boximg .fiorino{
     background-size: cover;
 }
 
 @media (max-width:660px){
-    .box-img{
+    .boximg{
         width: auto;
     }
 }
 
-.contain-circulo{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
+.contain-circulo-fiorino{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
     position: relative;
+    display: none;
     width: 40rem;
 
 }
@@ -73,6 +75,13 @@
     color: white;
     cursor: pointer;
     user-select: none; /*desabilita seleção de texto dentro do btn*/
+}
+
+
+.contain-circulo-hyundai-hr{
+    position: relative;
+    display: none;
+    width: 40rem;
 }
 
 .fiorino-btn-1{

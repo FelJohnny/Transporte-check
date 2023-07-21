@@ -16,8 +16,7 @@
     <header class="header">
         <nav class="menu">
             <ul>
-                <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png"
-                            alt='logo'></a></li>
+                <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png" alt='logo'></a></li>
                 <li><a class="sair" href="./index.html">SAIR</a></li>
             </ul>
         </nav>
@@ -28,7 +27,7 @@
         <h3>Selecione o veiculo<span class="required">*</span></h3>
         <form action="" class="form-entrega">
 
-            <select id="veiculos" name="veiculos" class="list-btn" required>
+            <select id="veiculos" name="veiculos" class="list-btn" required onchange="trocaVeiculo()">
                 <option selected disabled hidden></option>
                 <option value="1">hyuday - HR</option>
                 <option value="2">Fiorino - Fiat</option>
@@ -41,11 +40,19 @@
                 <option value="2">Não</option>
             </select>
 
-            <div class="box-img">
+            <div class="boximg">
                 
                 <h3>selecione a localização do problema na imagem abaixo<span class="required">*</span></h3>
-                <div class="contain-circulo">
-                    <img class="fiorino" src="./img/Fiorino-img.png" alt="Fiorino">
+                <div class="contain-circulo-fiorino">
+                    <img class="fiorino" src="./img/Fiorino-img.png" alt="Fiorino" display="block">
+                    <div class="circulo-btn fiorino-btn-1">1</div>
+                    <div class="circulo-btn fiorino-btn-2">2</div>
+                    <div class="circulo-btn fiorino-btn-3">3</div>
+                    <div class="circulo-btn fiorino-btn-4">4</div>
+                </div>
+
+                <div class="contain-circulo-hyundai-hr">
+                    <img class="fiorino" src="./img/Hyundai HR HD 2_5 2008_atualizada.png" alt="Fiorino" display="block">
                     <div class="circulo-btn fiorino-btn-1">1</div>
                     <div class="circulo-btn fiorino-btn-2">2</div>
                     <div class="circulo-btn fiorino-btn-3">3</div>
@@ -101,7 +108,7 @@
                 <option value="42">Chave Ignição</option>
             </select>
             <div class="add">
-                <img src="./img/plus.png" alt="Adicionar problema">
+                <img  src="./img/plus.png" alt="Adicionar problema">
             </div>
             <h3>itinerário:<span class="required">*</span></h3>
             <textarea name="itinerario" id="observ" cols="30" rows="2" required></textarea>
@@ -109,13 +116,15 @@
             <textarea name="observ" id="observ" cols="30" rows="2"></textarea>
 
             <button class="button-entrega">SEGUIR</button>
-
+            
         </form>
     </section>
     <footer>
         <p>Todos direitos Reservados</p>
     </footer>
-
+    <script src="./js/entrega.js">
+        
+    </script>
 </body>
 
 </html>
