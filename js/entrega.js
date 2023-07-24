@@ -1,6 +1,8 @@
 let veiculoList = document.getElementById("veiculos");
 let danificacaoList = document.getElementById("danificacao");
 let h3Danificacao = document.querySelector('.desc-danificacao');
+
+//------------------------------SELECIONE O VEICULO-----------------------------
 function trocaVeiculo(){
 
     let veiculosValues = veiculoList.options[veiculoList.selectedIndex].value;
@@ -25,24 +27,41 @@ function trocaVeiculo(){
     
 }
 
+//------------------------------O VEICULO POSSUI DANIFICAÇÃO?-----------------------------
+
 let h3BoxImg = document.querySelector('.desc-boximg');
 let circulobtn = document.querySelectorAll('.circulo-btn');
+let selectDanifiList = document.getElementById('problema');
 
 function veiculoDanificado(){
     let danificacaoValues = danificacaoList.options[danificacaoList.selectedIndex].value;    
-    console.log(danificacaoValues);
-    console.log(circulobtn);
+    let h3SelecProblem = document.querySelector('.desc-select-problem');
+    let addProblem = document.querySelector('.add');
+
     if (danificacaoValues == 1){
         h3BoxImg.style.display='initial';
         for(let i = 0; i < circulobtn.length; i++){ //utilizando estrutura de repeticao para selecionar todos os circulos-btn's pois esta utilizando querryselectorall
             circulobtn[i].style.display='initial';
         }
 
+        h3SelecProblem.style.display='block';
+        selectDanifiList.style.display='block';
+        addProblem.style.display='block';
+        
+
     }else if(danificacaoValues == 2){
         h3BoxImg.style.display='none'
-        for(let i = 0; i < circulobtn.length; i++){
+        for(let i = 0; i < circulobtn.length; i++){ //utilizando estrutura de repeticao para selecionar todos os circulos-btn's pois esta utilizando querryselectorall
             circulobtn[i].style.display='none';
         }
+
+        h3SelecProblem.style.display='none';
+        selectDanifiList.style.display='none';
+        addProblem.style.display='none';
+
+        let danificacaoSelect = document.getElementById('problema');
+        danificacaoSelect.removeAttribute('required');
+        
     }
     
 }
