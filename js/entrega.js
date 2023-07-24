@@ -38,7 +38,7 @@ function veiculoDanificado(){
     let h3SelecProblem = document.querySelector('.desc-select-problem');
     let addProblem = document.querySelector('.add');
 
-    if (danificacaoValues == 1){
+    if (danificacaoValues == 1){ //-----------SIM---------------
         h3BoxImg.style.display='initial';
         for(let i = 0; i < circulobtn.length; i++){ //utilizando estrutura de repeticao para selecionar todos os circulos-btn's pois esta utilizando querryselectorall
             circulobtn[i].style.display='initial';
@@ -49,7 +49,7 @@ function veiculoDanificado(){
         addProblem.style.display='block';
         
 
-    }else if(danificacaoValues == 2){
+    }else if(danificacaoValues == 2){//-----------NÃO---------------
         h3BoxImg.style.display='none'
         for(let i = 0; i < circulobtn.length; i++){ //utilizando estrutura de repeticao para selecionar todos os circulos-btn's pois esta utilizando querryselectorall
             circulobtn[i].style.display='none';
@@ -60,9 +60,37 @@ function veiculoDanificado(){
         addProblem.style.display='none';
 
         let danificacaoSelect = document.getElementById('problema');
-        danificacaoSelect.removeAttribute('required');
+        danificacaoSelect.removeAttribute('required'); // removendo a necessidade de preencimento do campo
         
     }
     
 }
     
+//-----------------SELECIONE O PROBLEMA-------------------
+
+
+
+function selecioneProblem(botaoselecionado){    
+    problemList = document.getElementById('problema'); // select dos problemas
+    problemValue = problemList.options[problemList.selectedIndex].value; // valores do select dos problemas
+    
+    
+    veiculo1Btn1 = document.querySelector('veiculo1-btn-1');
+    veiculo1BTN2 = document.querySelector('veiculo1-btn-2');
+    veiculo1BTN3 = document.querySelector('veiculo1-btn-3');
+    veiculo1BTN4 = document.querySelector('veiculo1-btn-4');
+    
+
+    if(botaoselecionado == '1'){
+        veiculo1Btn1.style.background='green';
+    }else if(botaoselecionado == '2'){
+        veiculo1BTN2.style.background='blue';
+    }
+
+
+   
+    
+    
+}
+//------------------------IN-PROGRESS--------------------------------//
+
