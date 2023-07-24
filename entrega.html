@@ -35,7 +35,7 @@
 
             <h3 class="desabilita desc-danificacao">O veiculo possui alguma danificação?<span class="required">*</span></h3>
 
-            <select name="danificacao" id="danificacao" class="list-btn desabilita" required>
+            <select name="danificacao" id="danificacao" class="list-btn desabilita" required onchange="veiculoDanificado()">
                 <option selected disabled hidden></option>
                 <option value="1">Sim</option>
                 <option value="2">Não</option>
@@ -43,22 +43,22 @@
 
             <div class="boximg">
                 
-                <h3 class="desc-boximg">selecione a localização do problema na imagem abaixo<span class="required">*</span></h3>
+                <h3 class="desc-boximg desabilita">selecione a localização do problema na imagem abaixo<span class="required">*</span></h3>
                 
-                <div class="contain-circulo-veiculo1"><!--FIORINO-->
+                <div class="contain-circulo-veiculo1 desabilita"><!--FIORINO-->
                     <img src="./img/Fiorino-img.png" alt="Fiorino">
-                    <div class="circulo-btn veiculo1-btn-1">1</div>
-                    <div class="circulo-btn veiculo1-btn-2">2</div>
-                    <div class="circulo-btn veiculo1-btn-3">3</div>
-                    <div class="circulo-btn veiculo1-btn-4">4</div>
+                    <div class="circulo-btn desabilita veiculo1-btn-1">1</div>
+                    <div class="circulo-btn desabilita veiculo1-btn-2">2</div>
+                    <div class="circulo-btn desabilita veiculo1-btn-3">3</div>
+                    <div class="circulo-btn desabilita veiculo1-btn-4">4</div>
                 </div>
 
-                <div class="contain-circulo-veiculo2"><!--HYUNDAI HR-->
+                <div class="contain-circulo-veiculo2 desabilita"><!--HYUNDAI HR-->
                     <img src="./img/Hyundai HR HD 2_5 2008_atualizada.png" alt="Hyundai HR">
-                    <div class="circulo-btn veiculo2-btn-1">1</div>
-                    <div class="circulo-btn veiculo2-btn-2">2</div>
-                    <div class="circulo-btn veiculo2-btn-3">3</div>
-                    <div class="circulo-btn veiculo2-btn-4">4</div>
+                    <div class="circulo-btn desabilita veiculo2-btn-1">1</div>
+                    <div class="circulo-btn desabilita veiculo2-btn-2">2</div>
+                    <div class="circulo-btn desabilita veiculo2-btn-3">3</div>
+                    <div class="circulo-btn desabilita veiculo2-btn-4">4</div>
                 </div>
             
                 </img>
@@ -113,9 +113,9 @@
                 <img  src="./img/plus.png" alt="Adicionar problema">
             </div>
             <h3>itinerário:<span class="required">*</span></h3>
-            <textarea name="itinerario" id="observ" cols="30" rows="2" required></textarea>
+            <textarea name="itinerario" class="observ" cols="30" rows="2" required></textarea>
             <h3>Observação:</h3>
-            <textarea name="observ" id="observ" cols="30" rows="2"></textarea>
+            <textarea name="observ" class="observ" cols="30" rows="2"></textarea>
 
             <button class="button-entrega">SEGUIR</button>
             
