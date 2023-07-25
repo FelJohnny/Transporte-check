@@ -1,14 +1,14 @@
 function trocaVeiculo(){
     var veiculoList = document.getElementById("veiculos");
     var danificacaoList = document.getElementById("danificacao");
-    var veiculosValues = veiculoList.options[veiculoList.selectedIndex].value;
     let h3Danificacao = document.querySelector('.desc-danificacao');
     
-
+    
     let imgVeiculo1 = document.querySelector('.contain-circulo-veiculo1');
     let imgVeiculo2 = document.querySelector('.contain-circulo-veiculo2');
-
     
+    
+    var veiculosValues = veiculoList.options[veiculoList.selectedIndex].value;
 
     if (veiculosValues == 1){
         
