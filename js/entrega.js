@@ -69,29 +69,21 @@ function veiculoDanificado(){
     
 //-----------------SELECIONE O PROBLEMA-------------------
 
+let botaoClicado = document.querySelectorAll("[data-btn-principal]");
 
+botaoClicado.forEach((elemento)=>{
+    elemento.addEventListener('click', (evento)=>{
+        
+        manipulaLista(evento.target.id)
+        
+    })
+})
 
-function selecioneProblem(botaoselecionado){    
-    problemList = document.getElementById('problema'); // select dos problemas
-    problemValue = problemList.options[problemList.selectedIndex].value; // valores do select dos problemas
-    
-    
-    veiculo1Btn1 = document.querySelector('veiculo1-btn-1');
-    veiculo1BTN2 = document.querySelector('veiculo1-btn-2');
-    veiculo1BTN3 = document.querySelector('veiculo1-btn-3');
-    veiculo1BTN4 = document.querySelector('veiculo1-btn-4');
-    
-
-    if(botaoselecionado == '1'){
-        veiculo1Btn1.style.background='green';
-    }else if(botaoselecionado == '2'){
-        veiculo1BTN2.style.background='blue';
-    }
 
 
    
     
     
-}
+
 //------------------------IN-PROGRESS--------------------------------//
 
