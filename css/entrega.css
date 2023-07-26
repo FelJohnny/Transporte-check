@@ -63,7 +63,6 @@
 
 .contain-circulo-veiculo1{ /*container criado para posicionar os botoes no local ideal do veiculo usando position absolute e relative*/
     position: relative;
-    display: none;
     width: 40rem;
 
 }
@@ -145,15 +144,13 @@
     border: 1px solid;
     
 }
-
+/*---------------------ADD PROBLEM---------------------------------*/
 .add{
-    display: flex;
     width: auto;
     height: 40px;
 }
 
 .add img{
-    display: inline;
     margin-right: 20px;   
     width: 20px;
     height: 20px;
@@ -188,7 +185,7 @@
 
 
 
-#observ{
+.observ{
     font-size: 1rem ;
     padding: 5px;
     margin-bottom: 10px;
@@ -198,7 +195,7 @@
     transition: 0.3s;
 }
 
-#observ:hover{
+.observ:hover{
     background-color: rgb(235, 234, 234);
     transition: 0.3s;
     
