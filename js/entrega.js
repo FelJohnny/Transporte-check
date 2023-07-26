@@ -74,11 +74,16 @@ let botaoClicado = document.querySelectorAll("[data-btn-principal]");
 botaoClicado.forEach((elemento)=>{
     elemento.addEventListener('click', (evento)=>{
         
-        manipulaLista(evento.target.id)
+        manipulaLista(evento.target.dataset.btn)
         
     })
 })
 
+function manipulaLista(btnClicado){
+    if(btnClicado === "btn1"){
+        console.log('adhjafdahs');
+    }
+}
 
 
    
