@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-function trocaVeiculo(){
-    var veiculoList = document.getElementById("veiculos");
-    var danificacaoList = document.getElementById("danificacao");
-    let h3Danificacao = document.querySelector('.desc-danificacao');
-    
-    
-    let imgVeiculo1 = document.querySelector('.contain-circulo-veiculo1');
-    let imgVeiculo2 = document.querySelector('.contain-circulo-veiculo2');
-    
-    
-    var veiculosValues = veiculoList.options[veiculoList.selectedIndex].value;
-=======
 let veiculoList = document.getElementById("veiculos");
 let danificacaoList = document.getElementById("danificacao");
 let h3Danificacao = document.querySelector('.desc-danificacao');
@@ -21,7 +8,7 @@ function trocaVeiculo(){
     let veiculosValues = veiculoList.options[veiculoList.selectedIndex].value;
     let imgVeiculo1 = document.querySelector('.contain-circulo-veiculo1');
     let imgVeiculo2 = document.querySelector('.contain-circulo-veiculo2');
->>>>>>> 1afa9cafef4116e87674a8dce4d2ac864ada15fb
+
 
     if (veiculosValues == 1){
         h3Danificacao.style.display='block';
