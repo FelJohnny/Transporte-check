@@ -79,10 +79,47 @@ botaoClicado.forEach((elemento)=>{
     })
 })
 
+let problemaOption = selectDanifiList.options;
+
 function manipulaLista(btnClicado){
+
     if(btnClicado === "btn1"){
-        console.log('adhjafdahs');
+        
+        limpaHiddenTrue();
+        for(let i = 1; i < 10; i++){
+            selectDanifiList.options[i].hidden = false;
+        }
+        
+        
+    }else if(btnClicado ==="btn2"){
+        
+        limpaHiddenTrue();
+        for(let i = 11; i < 20; i++){
+            selectDanifiList.options[i].hidden = false;
+        }
+
+    }else if(btnClicado ==="btn3"){
+        
+        limpaHiddenTrue();
+        for(let i = 20; i < 30; i++){
+            selectDanifiList.options[i].hidden = false;
+        }
+
+    }else if(btnClicado ==="btn4"){
+        
+        limpaHiddenTrue();
+        for(let i = 30; i < 42; i++){
+            selectDanifiList.options[i].hidden = false;
+        }
+
     }
+
+    function limpaHiddenTrue(){
+        for(let i = 1; i < 42; i++){
+            selectDanifiList.options[i].hidden = true;
+        }
+    }
+
 }
 
 
