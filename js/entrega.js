@@ -127,5 +127,10 @@ function manipulaLista(btnClicado){
     
     
 
-//------------------------IN-PROGRESS--------------------------------//
+//------------------------ADD NEW PROBLEM--------------------------------//
 
+
+let SelectProblema = document.querySelector('#danificacao');
+let CloneSelectProblema = SelectProblema.cloneNode(true);
+
+document.body.appendChild(CloneSelectProblema);
