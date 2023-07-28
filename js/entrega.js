@@ -67,14 +67,13 @@ function veiculoDanificado(){
     
 }
     
-//-----------------SELECIONE O PROBLEMA-------------------
+//---------------------------------SELECIONE AREA DO PROBLEMA--------------------------------------
 
 let botaoClicado = document.querySelectorAll("[data-btn-principal]");
 
 
 botaoClicado.forEach((elemento)=>{
     elemento.addEventListener('click', (evento)=>{
-        let AllSelectProblema = document.querySelectorAll('.c-problema');// conforme vai add novos selects e necessario array pra aplicar o manipula lista em todos selects
         
         manipulaLista(evento.target.dataset.btn)
         
@@ -83,14 +82,15 @@ botaoClicado.forEach((elemento)=>{
 })
     
     
-    //let problemaOptionaAll = document.querySelectorAll('.c-problema option');
+    //let problemaOptionaAll = document.querySelectorAll('.c-problema option'); //nao sera usado pois so aplica no primeiro select, não nos clones
     
-    function limpaHiddenTrue(){
-        for(let i = 1; i < 42; i++){
+function limpaHiddenTrue(){ //desabilita visualização de todos options ao ser chamado
+    for(let i = 1; i < 42; i++){
             //problemaOptionaAll[i].hidden = true;
             AllSelectProblema[cont].options[i].hidden = true;
-        }
     }
+}
+
 
 function manipulaLista(btnClicado){
     AllSelectProblema = document.querySelectorAll('.c-problema');
@@ -156,9 +156,11 @@ function addNewProblem(){
     let selectDanifiList = document.querySelector('.c-problema'); //alocando a tag <select> problema
     let containerSelectProblema = document.querySelector('.containerSelectProblema'); //alocando container do select, finalidade: adicionar o clone abaixo
     let cloneSelectProblema = selectDanifiList.cloneNode(true); //alocando clone na variavel
-    
+    for(let i = 0; i < 43; i++){ // deixando todos os options do clone invisiveis, obrigando o usuario a apertar o botao informando o local do problema novamente
+        cloneSelectProblema.options[i].hidden = true;
+
+    }
     containerSelectProblema.appendChild(cloneSelectProblema); //posicionando clone abaixo do original    
-    
     cont++; //adiciona +1 no contador ao ser executado
     console.log(cont);
     
