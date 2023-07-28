@@ -134,7 +134,7 @@ function manipulaLista(btnClicado){
     }
     
     
-    problemaOptionaAll = document.querySelectorAll('.c-problema option');
+   // problemaOptionaAll = document.querySelectorAll('.c-problema option');
 }
 
 
@@ -153,14 +153,21 @@ add.addEventListener('click',addNewProblem); //ao clicar chama funcao
 let cont = 0; // conta a quantidade de vezes que e adicionado um novo problema, para ser usado no AllSelectProblema(identifica quem foi adicionado e aplica o if btnclicado no exato adicionado)
 
 function addNewProblem(){
-    let selectDanifiList = document.querySelector('.c-problema'); //alocando a tag <select> problema
+    let selectDanifiList = document.querySelectorAll('.c-problema'); //alocando a tag <select> problema
     let containerSelectProblema = document.querySelector('.containerSelectProblema'); //alocando container do select, finalidade: adicionar o clone abaixo
-    let cloneSelectProblema = selectDanifiList.cloneNode(true); //alocando clone na variavel
-    for(let i = 0; i < 43; i++){ // deixando todos os options do clone invisiveis, obrigando o usuario a apertar o botao informando o local do problema novamente
+    let cloneSelectProblema = selectDanifiList[0].cloneNode(true); //alocando clone do primeiro item do array na variavel
+    for(let i = 0; i < 43; i++){ // deixando todos os options do clone invisiveis ao executar a funcao addnew, obrigando o usuario a apertar o botao informando o local do problema novamente
         cloneSelectProblema.options[i].hidden = true;
 
     }
+    selectDanifiList[cont].disabled = true;
     containerSelectProblema.appendChild(cloneSelectProblema); //posicionando clone abaixo do original    
+    console.log(cont);
+    console.log(selectDanifiList[cont]);
+    
+    
+    
+    console.log(selectDanifiList);
     cont++; //adiciona +1 no contador ao ser executado
     console.log(cont);
     
