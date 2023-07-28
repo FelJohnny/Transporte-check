@@ -29,8 +29,8 @@
 
             <select id="veiculos" name="veiculos" class="list-btn" required onchange="trocaVeiculo()">
                 <option selected disabled hidden></option>
-                <option value="1">hyuday - HR</option>
-                <option value="2">Fiorino - Fiat</option>
+                <option value="1">Fiorino - Fiat</option>
+                <option value="2">hyuday - HR</option>
             </select>
 
             <h3 class="desabilita desc-danificacao">O veiculo possui alguma danificação?<span class="required">*</span></h3>
@@ -114,9 +114,11 @@
                 </select>
 
             </div>
-                <div class="add desabilita">
-                    <img src="./img/plus.png" alt="Adicionar problema">
+                <div class="cont-add-remove desabilita">
+                    <img class="add" src="./img/plus.png" alt="Adicionar problema">
+                    <img class="remove" src="./img/minus.png" alt="remover problema">
                 </div>
+                
                 <h3>itinerário:<span class="required">*</span></h3>
                 <textarea id='itinerario' name="itinerario" class="observ" cols="30" rows="2" required></textarea>
                 <h3>Observação:</h3>

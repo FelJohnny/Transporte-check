@@ -37,7 +37,7 @@ let selectDanifiList = document.querySelector('.c-problema');
 function veiculoDanificado(){
     let danificacaoValues = danificacaoList.options[danificacaoList.selectedIndex].value;    
     let h3SelecProblem = document.querySelector('.desc-select-problem');
-    let addProblem = document.querySelector('.add');
+    let addProblem = document.querySelector('.cont-add-remove');
 
     if (danificacaoValues == 1){ //-----------SIM---------------
         h3BoxImg.style.display='initial';
@@ -47,7 +47,7 @@ function veiculoDanificado(){
 
         h3SelecProblem.style.display='block';
         selectDanifiList.style.display='block';
-        addProblem.style.display='block';
+        addProblem.style.display='flex';
         
 
     }else if(danificacaoValues == 2){//-----------NÃO---------------
@@ -146,7 +146,7 @@ function manipulaLista(btnClicado){
 
 
 
-let add = document.querySelector('.add img');
+let add = document.querySelector('.add');
 
 add.addEventListener('click',addNewProblem); //ao clicar chama funcao
 

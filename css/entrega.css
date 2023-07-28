@@ -155,26 +155,42 @@
     margin-bottom: 10px;
 }
 
-.add{
-    width: auto;
+.cont-add-remove{
     height: 40px;
+    gap: 20px;
 }
 
-.add img{
-    margin-right: 20px;   
+.cont-add-remove .add{
+    
     width: 20px;
     height: 20px;
     padding: 10px;
     cursor: pointer;
 }
 
-.add img:active{
+.cont-add-remove .remove{
+      
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+ .add:active{
     width: 25px;
     height: 25px;
     transition: 0.1s;
     
 }
 
+.remove:active{
+    width: 25px;
+    height: 25px;
+    transition: 0.1s;
+    
+}
 
 #itinerario{
     font-size: 1rem ;
