@@ -161,14 +161,20 @@ function addNewProblem(){
 
     }
     containerSelectProblema.appendChild(cloneSelectProblema); //posicionando clone abaixo do original    
-    selectDanifiList[cont].disabled = true;
-    console.log(cont);
-    console.log(selectDanifiList[cont]);
+    selectDanifiList[cont].disabled = true; //desabilitando o select anterior ao adicionar um novo, utilizando o contador antes de cont++
     
-    
-    
-    console.log(selectDanifiList);
     cont++; //adiciona +1 no contador ao ser executado
-    console.log(cont);
+    console.log('adicionado outro problema',cont);
+    let contif = cont; // variavel criada para a condicional(cont não é encontrado dentro pois foi declarada fora da chave)
+    if(contif >= 1){ // se contador for maior que 1 desabilita questionario de danificacao
+        danificacaoList.disabled = true;
+        veiculoList.disabled = true;
+    }else {
+        danificacaoList.disabled = false;
+
+    }
     
 }
+
+
+//------------------------REMOVE PROBLEM--------------------------------//
