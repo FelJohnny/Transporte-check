@@ -78,7 +78,6 @@ botaoClicado.forEach((elemento)=>{
         
         manipulaLista(evento.target.dataset.btn)
         
-        console.log(AllSelectProblema);
     })
         
 })
