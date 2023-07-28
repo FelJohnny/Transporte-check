@@ -164,13 +164,14 @@ function addNewProblem(){
     selectDanifiList[cont].disabled = true; //desabilitando o select anterior ao adicionar um novo, utilizando o contador antes de cont++
     
     cont++; //adiciona +1 no contador ao ser executado
-    console.log('adicionado outro problema',cont);
-    let contif = cont; // variavel criada para a condicional(cont não é encontrado dentro pois foi declarada fora da chave)
+    console.log('numero de problemas adicionais: ',cont);
+    let contif = cont; // variavel criada para usar na condicional(cont não é encontrado dentro pois foi declarada fora da chave)
     if(contif >= 1){ // se contador for maior que 1 desabilita questionario de danificacao
         danificacaoList.disabled = true;
         veiculoList.disabled = true;
     }else {
-        danificacaoList.disabled = false;
+
+        alert('Um erro inesperado aaconteceu, se possivel reinicie o sistema');
 
     }
     
@@ -178,3 +179,24 @@ function addNewProblem(){
 
 
 //------------------------REMOVE PROBLEM--------------------------------//
+
+let remove  = document.querySelector('.remove');
+
+remove.addEventListener('click',removeProblem);
+
+function removeProblem(){
+    let selectDanifiList = document.querySelectorAll('.c-problema'); //alocando a tag <select> problema em um variavel
+    cont = cont -1;
+    if(cont >= 0){
+        selectDanifiList[cont].remove();
+        console.log('foi removido 1 problema ficando:',cont);
+    }else{
+        alert('Todos problemas adicionais já foram removidos. Caso não exista problemas com o veiculo, informar "NÃO" no campo acima');
+        cont++;
+    }
+    if(cont === 0){
+        danificacaoList.disabled = false;
+        veiculoList.disabled = false;
+    }
+    
+}
