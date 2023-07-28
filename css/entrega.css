@@ -146,6 +146,14 @@
 }
 /*---------------------ADD PROBLEM---------------------------------*/
 
+.containerSelectProblema{
+    width: auto;
+}
+
+.containerSelectProblema .c-problema{
+    width: 100%;
+    margin-bottom: 10px;
+}
 
 .add{
     width: auto;

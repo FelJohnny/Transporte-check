@@ -61,11 +61,13 @@
                     <div data-btn="btn4" class="circulo-btn desabilita veiculo2-btn-4">4</div>
                 </div>
             
-                </img>
+                
             </div>
             <h3 class="desc-select-problem desabilita">Selecione o(s) problema(s):<span class="required">*</span></h3>
             
-                <select name="problema" id="problema" required class="list-btn desabilita">
+            <div class="containerSelectProblema"><!--container criado para inserir o clone-->
+
+                <select name="problema" class="c-problema list-btn desabilita" id="problema" required >
                     <option selected disabled hidden></option>
                     <option hidden value="1">Farol Esq.</option>
                     <option hidden value="2">Farol Dir.</option>
@@ -110,14 +112,16 @@
                     <option hidden value="41">Limpeza Exterior</option>
                     <option hidden value="42">Chave Ignição</option>
                 </select>
+
+            </div>
                 <div class="add desabilita">
                     <img src="./img/plus.png" alt="Adicionar problema">
                 </div>
                 <h3>itinerário:<span class="required">*</span></h3>
-            <textarea name="itinerario" class="observ" cols="30" rows="2" required></textarea>
-            <h3>Observação:</h3>
-            <textarea name="observ" class="observ" cols="30" rows="2"></textarea>
-            
+                <textarea name="itinerario" class="observ" cols="30" rows="2" required></textarea>
+                <h3>Observação:</h3>
+                <textarea name="observ" class="observ" cols="30" rows="2"></textarea>
+                
             <button class="button-entrega">SEGUIR</button>
             
         </form>

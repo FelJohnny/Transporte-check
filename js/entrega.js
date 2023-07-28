@@ -32,7 +32,7 @@ function trocaVeiculo(){
 
 let h3BoxImg = document.querySelector('.desc-boximg');
 let circulobtn = document.querySelectorAll('.circulo-btn');
-let selectDanifiList = document.getElementById('problema');
+let selectDanifiList = document.querySelector('.c-problema');
 
 function veiculoDanificado(){
     let danificacaoValues = danificacaoList.options[danificacaoList.selectedIndex].value;    
@@ -60,7 +60,7 @@ function veiculoDanificado(){
         selectDanifiList.style.display='none';
         addProblem.style.display='none';
 
-        let danificacaoSelect = document.getElementById('problema');
+        let danificacaoSelect = document.querySelector('.c-problema');
         danificacaoSelect.removeAttribute('required'); // removendo a necessidade de preencimento do campo
         
     }
@@ -71,55 +71,71 @@ function veiculoDanificado(){
 
 let botaoClicado = document.querySelectorAll("[data-btn-principal]");
 
+
 botaoClicado.forEach((elemento)=>{
     elemento.addEventListener('click', (evento)=>{
+        let AllSelectProblema = document.querySelectorAll('.c-problema');// conforme vai add novos selects e necessario array pra aplicar o manipula lista em todos selects
         
         manipulaLista(evento.target.dataset.btn)
         
+        console.log(AllSelectProblema);
     })
+        
 })
-
-let problemaOption = selectDanifiList.options;
+    
+    
+    //let problemaOptionaAll = document.querySelectorAll('.c-problema option');
+    
+    function limpaHiddenTrue(){
+        for(let i = 1; i < 42; i++){
+            //problemaOptionaAll[i].hidden = true;
+            AllSelectProblema[cont].options[i].hidden = true;
+        }
+    }
 
 function manipulaLista(btnClicado){
+    AllSelectProblema = document.querySelectorAll('.c-problema');
 
     if(btnClicado === "btn1"){
         
         limpaHiddenTrue();
         for(let i = 1; i < 10; i++){
-            selectDanifiList.options[i].hidden = false;
+            AllSelectProblema[cont].options[i].hidden = false
+            //problemaOptionaAll[i].hidden = false;
         }
+        
         
         
     }else if(btnClicado ==="btn2"){
         
         limpaHiddenTrue();
         for(let i = 11; i < 20; i++){
-            selectDanifiList.options[i].hidden = false;
+            AllSelectProblema[cont].options[i].hidden = false
+            //problemaOptionaAll[i].hidden = false;
         }
-
+        
+        
     }else if(btnClicado ==="btn3"){
         
         limpaHiddenTrue();
         for(let i = 20; i < 30; i++){
-            selectDanifiList.options[i].hidden = false;
+            //problemaOptionaAll[i].hidden = false;
+            AllSelectProblema[cont].options[i].hidden = false
         }
+        
 
     }else if(btnClicado ==="btn4"){
         
         limpaHiddenTrue();
         for(let i = 30; i < 42; i++){
-            selectDanifiList.options[i].hidden = false;
+            //problemaOptionaAll[i].hidden = false;
+            AllSelectProblema[cont].options[i].hidden = false
         }
 
     }
-
-    function limpaHiddenTrue(){
-        for(let i = 1; i < 42; i++){
-            selectDanifiList.options[i].hidden = true;
-        }
-    }
-
+    
+    
+    problemaOptionaAll = document.querySelectorAll('.c-problema option');
 }
 
 
@@ -130,7 +146,21 @@ function manipulaLista(btnClicado){
 //------------------------ADD NEW PROBLEM--------------------------------//
 
 
-let SelectProblema = document.querySelector('#danificacao');
-let CloneSelectProblema = SelectProblema.cloneNode(true);
 
-document.body.appendChild(CloneSelectProblema);
+let add = document.querySelector('.add img');
+
+add.addEventListener('click',addNewProblem); //ao clicar chama funcao
+
+let cont = 0; // conta a quantidade de vezes que e adicionado um novo problema, para ser usado no AllSelectProblema(identifica quem foi adicionado e aplica o if btnclicado no exato adicionado)
+
+function addNewProblem(){
+    let selectDanifiList = document.querySelector('.c-problema'); //alocando a tag <select> problema
+    let containerSelectProblema = document.querySelector('.containerSelectProblema'); //alocando container do select, finalidade: adicionar o clone abaixo
+    let cloneSelectProblema = selectDanifiList.cloneNode(true); //alocando clone na variavel
+    
+    containerSelectProblema.appendChild(cloneSelectProblema); //posicionando clone abaixo do original    
+    
+    cont++; //adiciona +1 no contador ao ser executado
+    console.log(cont);
+    
+}
