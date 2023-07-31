@@ -99,7 +99,8 @@ function manipulaLista(btnClicado){
         
         limpaHiddenTrue();
         for(let i = 1; i < 10; i++){
-            AllSelectProblema[cont].options[i].hidden = false
+            AllSelectProblema[cont].options[i].hidden = false; //habilitando os options baseados no botao selecionado
+            AllSelectProblema[cont].focus(); //aplicando foco no select ao click
             //problemaOptionaAll[i].hidden = false;
         }
         
@@ -109,7 +110,8 @@ function manipulaLista(btnClicado){
         
         limpaHiddenTrue();
         for(let i = 11; i < 20; i++){
-            AllSelectProblema[cont].options[i].hidden = false
+            AllSelectProblema[cont].options[i].hidden = false;
+            AllSelectProblema[cont].focus(); //aplicando foco no select ao click
             //problemaOptionaAll[i].hidden = false;
         }
         
@@ -118,8 +120,9 @@ function manipulaLista(btnClicado){
         
         limpaHiddenTrue();
         for(let i = 20; i < 30; i++){
+            AllSelectProblema[cont].options[i].hidden = false;
+            AllSelectProblema[cont].focus(); //aplicando foco no select ao click
             //problemaOptionaAll[i].hidden = false;
-            AllSelectProblema[cont].options[i].hidden = false
         }
         
 
@@ -127,8 +130,9 @@ function manipulaLista(btnClicado){
         
         limpaHiddenTrue();
         for(let i = 30; i < 42; i++){
+            AllSelectProblema[cont].options[i].hidden = false;
+            AllSelectProblema[cont].focus(); //aplicando foco no select ao click
             //problemaOptionaAll[i].hidden = false;
-            AllSelectProblema[cont].options[i].hidden = false
         }
 
     }
