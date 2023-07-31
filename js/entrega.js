@@ -171,7 +171,7 @@ function addNewProblem(){
         veiculoList.disabled = true;
     }else {
 
-        alert('Um erro inesperado aaconteceu, se possivel reinicie o sistema');
+        alert('Um erro inesperado aconteceu, se possivel reinicie o sistema');
 
     }
     
@@ -187,13 +187,15 @@ remove.addEventListener('click',removeProblem);
 
 function removeProblem(){
     let selectDanifiList = document.querySelectorAll('.c-problema'); //alocando a tag <select> problema em um variavel
-    cont = cont -1;
-    if(cont >= 0){
+    
+    if(cont > 0){
         selectDanifiList[cont].remove();
+        cont = cont -1;
         console.log('foi removido 1 problema ficando:',cont);
+        selectDanifiList[cont].disabled = false;
     }else{
         alert('Todos problemas adicionais já foram removidos. Caso não exista problemas com o veiculo, informar "NÃO" no campo acima');
-        cont++;
+        
     }
     if(cont === 0){
         danificacaoList.disabled = false;
