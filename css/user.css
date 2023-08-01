@@ -1,0 +1,30 @@
+.user{
+    
+    margin: 0 auto;
+    width: 1200px;
+
+    
+    
+    
+}
+
+
+.user-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "box1 box2"
+    "box1 box2";
+}
+
+.user-box1{
+    grid-area: "box1";
+    width: 100px;
+    
+    
+}
+
+.user-box2{
+    grid-area: "box2";
+    
+}
