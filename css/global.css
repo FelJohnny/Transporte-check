@@ -52,6 +52,18 @@ label{
 .header img{
   height: 100%;
   width: 150px;
+  
+}
+
+.menu-separador{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.usuario img{
+  width: 50px;
+  ;
 }
 
 .sair{
