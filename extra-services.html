@@ -1,24 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./img/logo-amalfis.ico">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Serviços Extras</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo-amalfis.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Serviços extras</title>
 </head>
-    <body class="body">
-        <header class="header">
-            <nav class="menu">
-                <ul>
-                    <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png"alt='logo'></a></li>
-                    <li><a class="sair" href="./index.html">SAIR</a></li>
-                </ul>
-            </nav>
-        </header><!--header-->
-        <section>
+
+<body class="body">
+    <header class="header">
+        <nav class="menu">
+            <ul>
+                <li><a class="services-logo" href="./Services.html"><img src="./img/LOGO AMALFIS DEITADO BRANCO.png" alt='logo'></a></li>
+                <li><a class="sair" href="./index.html">SAIR</a></li>
+            </ul>
+        </nav>
+    </header><!--header-->
+
+    <section class="entrega">
+            <h2>Checklist Veiculo</h2>
+        <h3>Selecione o veiculo<span class="required">*</span></h3>
+        <form action="" class="form-entrega">
+
+            <select id="veiculos" name="veiculos" class="list-btn" required onchange="trocaVeiculo()">
+                <option selected disabled hidden></option>
+                <option value="1">Fiat Mobi</option>
+            </select>
+
+            <h3 class="desabilita desc-danificacao">O veiculo possui alguma danificação?<span class="required">*</span></h3>
+
+            <select name="danificacao" id="danificacao" class="list-btn desabilita" required onchange="veiculoDanificado()">
+                <option selected disabled hidden></option>
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+            </select>
+
+            <div class="boximg">
                 
-        </section>
-        <footer><p>Todos direitos Reservados</p></footer>
-    </body>
+                <h3 class="desc-boximg desabilita">selecione a localização do problema na imagem abaixo<span class="required">*</span></h3>
+                
+                <div class="contain-circulo-veiculo1 desabilita" data-btn-principal="principal"> <!--FIAT MOBI-->
+                    <img src="./img/Fiat-Mobi.png" alt="FiatMobi">
+                    <div data-btn="btn1" class="circulo-btn desabilita veiculo1-btn-1" >1</div>
+                    <div data-btn="btn2" class="circulo-btn desabilita veiculo1-btn-2" >2</div>
+                    <div data-btn="btn3" class="circulo-btn desabilita veiculo1-btn-3" >3</div>
+                    <div data-btn="btn4" class="circulo-btn desabilita veiculo1-btn-4" >4</div>
+                </div>
+            
+                
+            </div>
+            <h3 class="desc-select-problem desabilita">Selecione o(s) problema(s):<span class="required">*</span></h3>
+            
+            <div class="containerSelectProblema"><!--container criado para inserir o clone-->
+
+                <select name="problema" class="c-problema list-btn desabilita" id="problema" required >
+                    <option selected disabled hidden></option>
+                    <option hidden value="1">Farol Esq.</option>
+                    <option hidden value="2">Farol Dir.</option>
+                    <option hidden value="3">Pisca Esq.</option>
+                    <option hidden value="4">Pisca Dir</option>
+                    <option hidden value="5">Lanterna Esq.</option>
+                    <option hidden value="6">Lanterna Dir.</option>
+                    <option hidden value="7">Luz Freio</option>
+                    <option hidden value="8">Luz Placa</option>
+                    <option hidden value="9">Buzina</option>
+                    <option hidden value="10">Ar Condicionado</option>
+                    <option hidden value="11">Retrovisor Interno</option>
+                    <option hidden value="12">Retrovisor Esq.</option>
+                    <option hidden value="13">Retrovisor Dir.</option>
+                    <option hidden value="14">Nivel de Óleo Hidraulico</option>
+                    <option hidden value="15">Nivel Água Parabrisa</option>
+                    <option hidden value="16">Nivel Fluído de Freio</option>
+                    <option hidden value="17">Nivel Liq. Arrefecimento</option>
+                    <option hidden value="18">Limpador Parabrisa</option>
+                    <option hidden value="19">Vidros Laterais</option>
+                    <option hidden value="20">Parabrisa Traseiro</option>
+                    <option hidden value="21">Parabrisa Dianteiro</option>
+                    <option hidden value="22">Vidros Eletricos</option>
+                    <option hidden value="23">Rádio</option>
+                    <option hidden value="24">Estofamento Bancos</option>
+                    <option hidden value="25">Tapetes internos</option>
+                    <option hidden value="26">Forros Internos</option>
+                    <option hidden value="27">Macaco</option>
+                    <option hidden value="28">Chave de Roda</option>
+                    <option hidden value="29">Estepe</option>
+                    <option hidden value="30">Triangulo</option>
+                    <option hidden value="31">Extintor</option>
+                    <option hidden value="32">Bateria</option>
+                    <option hidden value="33">Indicadores Painel</option>
+                    <option hidden value="34">Documento Veicular</option>
+                    <option hidden value="35">Manual do Carro</option>
+                    <option hidden value="36">Cartão Seguro</option>
+                    <option hidden value="37">Cartão Abastecimento</option>
+                    <option hidden value="38">GPS</option>
+                    <option hidden value="39">Cinto de segurança</option>
+                    <option hidden value="40">Limpeza interior</option>
+                    <option hidden value="41">Limpeza Exterior</option>
+                    <option hidden value="42">Chave Ignição</option>
+                </select>
+
+            </div>
+                <div class="cont-add-remove desabilita">
+                    <img class="add" src="./img/plus.png" alt="Adicionar problema">
+                    <img class="remove" src="./img/minus.png" alt="remover problema">
+                </div>
+                
+                <h3>itinerário:<span class="required">*</span></h3>
+                <textarea id='itinerario' name="itinerario" class="observ" cols="30" rows="2" required></textarea>
+                <h3>Observação:</h3>
+                <textarea id='observ' name="observ" class="observ" cols="30" rows="2"></textarea>
+                
+            <button class="button-entrega">SEGUIR</button>
+            
+        </form>
+    </section>
+    <footer>
+        <p>Todos direitos Reservados</p>
+    </footer>
+    <script src="./js/entrega.js">
+        
+    </script>
+</body>
+
 </html>
