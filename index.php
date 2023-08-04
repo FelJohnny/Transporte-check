@@ -16,7 +16,7 @@
     </div>
 
 
-    <form class="login" action="./Services.html">
+    <form class="login" action="./Services.html" method="post">
         <img class="img-login" src="./img/LOGO AMALFIS FINAL PRETO.png" alt="">
         <h2>Login</h2>
         <label for="user">Usuario:</label>
@@ -26,8 +26,17 @@
         <input type="password" id="password" name="password"  required>
 
         <a class="registrar" href="./">Não possuo uma conta</a>
-        <input class="enviar" type="submit" id="acao" value="Entrar" />
+        <input class="enviar" type="submit" id="acao" name="acao" value="Entrar" />
+        
     </form>
     
+
+
+    
 </body>
+<?php
+    $user = $_POST['user'];
+    //echo $user;
+    
+    ?>
 </html>
