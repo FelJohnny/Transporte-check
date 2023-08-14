@@ -22,11 +22,27 @@
     border-radius: 4px;
     background: rgb(255, 255, 255);
     padding: 0 20px;
-    
+   
     
 }
 
+.login-container{
+    animation-name: slidein;
+    animation-duration: 500ms;
+}
 
+@keyframes slidein {
+    from{
+        opacity: 0;
+        transform: translateX(-50%)
+    }
+    
+}
+
+.login-container label{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
 
 .logo{
     display: grid;
@@ -42,13 +58,12 @@
 }
 
 .logo img{
-    height: 300px;
-    
-      
-    
+    height: 300px;  
 }
 
 input{
+    width: 100%;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     border: 2px solid rgb(117, 117, 117);
     background: rgb(235, 234, 234);
@@ -60,16 +75,16 @@ input{
 }
 
 .registrar{
-    padding-top: 10px;
+    text-align: end;
 }
-
 
 .enviar{
     height: 2.5rem;
-    width: 8rem;
+    width: 100%;
     justify-self: end;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 20px;
     margin-bottom: 20px ;
     border-radius: 5px;
     border: 1px;

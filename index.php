@@ -17,16 +17,18 @@
 
 
     <form class="login" action="./Services.html" method="post">
-        <img class="img-login" src="./img/LOGO AMALFIS FINAL PRETO.png" alt="">
-        <h2>Login</h2>
-        <label for="user">Usuario:</label>
-        <input type="text" id="user" name="user" placeholder="" required>
-
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password"  required>
-
-        <a class="registrar" href="./">Não possuo uma conta</a>
-        <input class="enviar" type="submit" id="acao" name="acao" value="Entrar" />
+        <div class="login-container">
+            <img class="img-login" src="./img/LOGO AMALFIS FINAL PRETO.png" alt="">
+            <h2>Login</h2>
+            <label for="user">Usuario:</label>
+            <input type="text" id="user" name="user" placeholder="" required>
+    
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password"  required>
+    
+            <a class="registrar" href="./"><p>Não possuo uma conta </p></a>
+            <input class="enviar" type="submit" id="acao" name="acao" value="Entrar" />
+        </div>
         
     </form>
     
@@ -35,7 +37,7 @@
     
 </body>
 <?php
-    $user = $_POST['user'];
+    //$user = $_POST['user'];
     //echo $user;
     
     ?>
