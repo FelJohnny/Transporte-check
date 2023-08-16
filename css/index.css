@@ -47,6 +47,15 @@
 
 .logo img{
     height: 300px;  
+    animation: fade 400ms;
+}
+
+
+@keyframes fade {
+    from{
+      opacity: 0.5;
+      transform: scale(0.5);
+    }
 }
 
 input{
@@ -144,6 +153,9 @@ input{
     animation-delay: 160ms;
     animation-fill-mode: backwards; 
 }
+
+
+.logo img{}
 
 @keyframes slidein {
     from{
