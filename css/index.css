@@ -154,9 +154,6 @@ input{
     animation-fill-mode: backwards; 
 }
 
-
-.logo img{}
-
 @keyframes slidein {
     from{
         opacity: 0;
